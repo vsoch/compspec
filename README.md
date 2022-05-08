@@ -65,6 +65,7 @@ about design. If we are attempting to model complex software there is likely no 
 a graph design. But perhaps we can "flatten" the graph into a set of facts with associated
 identifiers and then give the entire thing to a solver (as a faster solution than
 manual parsing). I think using [clingo](https://potassco.org/clingo/) should work nicely.
+We can also try more traditional graph methods, if clingo is not sufficient.
 
 ### Use Cases
 
@@ -136,6 +137,11 @@ For more detailed examples, see:
  
 **under development!** I'll likely get these written and up here in the next few days (they aren't added yet).
  
+## Implementation Suggestions
+
+- During a parsing, a namespace should be "wrapped" to some respect so the raw identifiers are not the same (or they should be removed entirely). They are there for tracing back to an original object and mapping relationsips, but (for comparison between things) we should be matching entities.
+- We can likely do iterative parsing, meaning starting either on a higher level or with a piece of the thing to parse, and we can cut out early as soon as we find an incompatibility (unless there is some setting that says to parsee in completion).
+
 ## TODO
 
 - write asp example
