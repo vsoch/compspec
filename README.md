@@ -144,8 +144,6 @@ For more detailed examples, see:
 
 ## TODO
 
-- write asp example
 - looking into clingo for go
-- write python example
 - write abi example
 - write out actual full spec
